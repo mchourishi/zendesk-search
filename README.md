@@ -51,23 +51,30 @@ list
 
 
 2. Search through a dataset with field and value passed.
-# Search for a number field.
+- Search for a number field.
 ```
 search users _id 1
 ```
 OR
-# Search for a String field.
+- Search for a String field.
 ```
 search users name franc
 ```
 OR
-# Search for a Boolean field
+- Search for a Boolean field
 ```
 search users active true
 ```
 OR 
-# Search for an Object field.
+- Search for an Object field.
 ```
 search users tags Bonanza
 ```
+## Screenshots
 
+-List Fields
+<img src= "https://github.com/mchourishi/zendesk-search/blob/master/screenshots/list_users_fields.png">
+
+-Search
+
+<img src= "https://github.com/mchourishi/zendesk-search/blob/master/screenshots/search_users_by_id.png">
