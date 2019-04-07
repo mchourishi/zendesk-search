@@ -40,7 +40,7 @@ const USER_SEARCH_RESULTS = `
 │ age  │ 23   │
 └──────┴──────┘`;
 
-const result = search({ dataset: "users", field : "_id" , value : 1 }, datasets);
+
 
  describe("it can call search function", () => {
     it("renders search results with the dataset, field and value passed", () => {

@@ -1,6 +1,6 @@
 const Table = require('cli-table');
 
-module.exports.displayData = function (record) { 
+module.exports.displayData = function (record) {
     let resultStr = "";
     record.map(rec => {
         const recordTable = new Table();

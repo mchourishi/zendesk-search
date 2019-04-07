@@ -41,14 +41,15 @@ class Model {
       }
       if (type == "boolean") {
         //If value is passed as yes/no
-        if (value.toLowerCase() === "yes") {
+        if (typeof value === "string" && value.toLowerCase() === "yes") {
           value = true;
-        } else if (value.toLowerCase() === "no") {
+        } else if (typeof value === "string" && value.toLowerCase() === "no") {
           value = false;
         }
         return field === JSON.parse(value);
       }
       if (type == "object") {
+        return (Object.values(field).findIndex((item) => { return item.toLowerCase() === value.toLowerCase() }) >= 0);
       }
     }
     return false;
