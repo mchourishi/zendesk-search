@@ -73,6 +73,7 @@ search users tags Bonanza
 ## Screenshots
 
 -List Fields
+
 <img src= "https://github.com/mchourishi/zendesk-search/blob/master/screenshots/list_users_fields.png">
 
 -Search
