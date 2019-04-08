@@ -28,10 +28,10 @@ const organization_test_data = [{
   tickets_3: "A Problem in Turks and Caicos Islands",
   tickets_4: "A Problem in Guyana",
   url: "http://initech.zendesk.com/api/v2/organizations/101.json",
-  users_1: "Loraine Pittman",
-  users_2: "Francis Bailey",
-  users_3: "Haley Farmer",
-  users_4: "Herrera Norman"
+  users_5: "Loraine Pittman",
+  users_6: "Francis Bailey",
+  users_7: "Haley Farmer",
+  users_8: "Herrera Norman"
 }];
 
 it("it should have the defined fields", () => {

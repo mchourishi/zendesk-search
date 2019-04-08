@@ -57,11 +57,12 @@ class Model {
 
   //To get Related records from relationships
     getRelatedRecords(results, dataStore){
-    const relationships = this.relationships;    
+    const relationships = this.relationships;
+    let cnt = 0;    
     if(relationships && relationships.length > 0 ){
     results.map(result => {       
        relationships.map(relation=>{
-        let cnt = 0;
+       
         let relatedStore = dataStore[relation.model];
         let key = (relation.in_current === true) ? relation.primary_key : relation.foreign_key;
         let val = (relation.in_current === true) ? result[relation.foreign_key] : result[relation.primary_key];
