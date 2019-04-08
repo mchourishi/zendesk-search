@@ -45,8 +45,8 @@ const ticket_test_data = [
     type: "incident",
     url:
       "http://initech.zendesk.com/api/v2/tickets/436bf9b0-1147-4c0a-8439-6f79833bff5b.json",
-      "users_2": "Elma Castro",
-      "users_3": "Harris Côpeland",
+      "users_1": "Elma Castro",
+      "users_2": "Harris Côpeland",
     via: "web"
   }
 ];

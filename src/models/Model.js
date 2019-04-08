@@ -58,11 +58,11 @@ class Model {
   //To get Related records from relationships
     getRelatedRecords(results, dataStore){
     const relationships = this.relationships;
-    let cnt = 0;    
+    let cnt = 0, finalCnt = 0;    
     if(relationships && relationships.length > 0 ){
     results.map(result => {       
        relationships.map(relation=>{
-       
+        cnt = 0;
         let relatedStore = dataStore[relation.model];
         let key = (relation.in_current === true) ? relation.primary_key : relation.foreign_key;
         let val = (relation.in_current === true) ? result[relation.foreign_key] : result[relation.primary_key];
@@ -70,8 +70,13 @@ class Model {
         items.map(item => {
           cnt++;
           let k = `${[relation.model]}_${cnt}`;
+          if(k in result){
+              cnt = finalCnt+1;
+          }
+          k = `${[relation.model]}_${cnt}`;
           //result[[relation.model]] = item[relation.return_value];
           result[k] = item[relation.return_value];
+          finalCnt = cnt;
         });       
        }); 
     });
